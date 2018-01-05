@@ -111,24 +111,9 @@ describe('ScoreCard', function () {
 		    testFrame10 = new Frame("X", "X", "X", 10);
 		    console.log("in add strikes");
 		    
-console.log(testFrame1.getScore1());
-console.log(testFrame2.getScore1());
-console.log(testFrame3.getScore1());
-console.log(testFrame4.getScore1());
-console.log(testFrame5.getScore1());
-console.log(testFrame6.getScore1());
-console.log(testFrame7.getScore1());
-console.log(testFrame8.getScore1());
-console.log(testFrame9.getScore1());
-console.log(testFrame10.getScore1());
-console.log(testFrame10.getScore2());
-console.log(testFrame10.getScore3());
-
-
-
 		    var frameArray = [testFrame1, testFrame2, testFrame3, testFrame4, testFrame5, testFrame6, testFrame7, testFrame8, testFrame9, testFrame10]
 		    testScoreCard = new ScoreCard(frameArray);
-		     assert.equal(testScoreCard.addFrameScores(), 150);
+		     assert.equal(testScoreCard.addFrameScores(), 300);
 		})
 	})
 
