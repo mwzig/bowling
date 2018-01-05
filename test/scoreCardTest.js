@@ -13,7 +13,7 @@ describe('ScoreCard', function () {
 		     assert.equal(testScoreCard.getNbrOfFrames(), "3");
 		})
 	})
-	describe('#addFrameScores', function() {
+	describe('#addFrameScoresInitialTest', function() {
 		it('should return the count of 15', function() {
 		    testFrame1 = new Frame(5, 6, 7);
 		    testFrame2 = new Frame(5, 6, 7);
