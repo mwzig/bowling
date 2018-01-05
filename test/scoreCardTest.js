@@ -26,7 +26,7 @@ describe('ScoreCard', function () {
 	})
 
 	describe('#add10FrameScoresNoSparesNoStrikesNoSecondRoll', function() {
-		it('should return the count of 15', function() {
+		it('should return the count of total score of 45', function() {
 		    testFrame1 = new Frame(1, 0, 0);
 		    testFrame2 = new Frame(2, 0, 0);
 		    testFrame3 = new Frame(3, 0, 0);
@@ -44,7 +44,7 @@ describe('ScoreCard', function () {
 	})
 
 	describe('#add10FrameScoresNoSparesNoStrikesWithSecondRolls', function() {
-		it('should return the count of 15', function() {
+		it('should return the total score of 88', function() {
 		    testFrame1 = new Frame(1, 8, 0);
 		    testFrame2 = new Frame(2, 7, 0);
 		    testFrame3 = new Frame(3, 6, 0);
@@ -62,7 +62,7 @@ describe('ScoreCard', function () {
 	})
 
 	describe('#addScoresNoStrikesSpareOnLastFrame', function() {
-		it('should return the count of 15', function() {
+		it('should return the total score of 50', function() {
 		    testFrame1 = new Frame(2, "/", 0);
 		    testFrame2 = new Frame(1, 2, 0);
 		    testFrame3 = new Frame(1, 2, 0);
@@ -80,7 +80,7 @@ describe('ScoreCard', function () {
 	})
 
 	describe('#addScoresAllSpares', function() {
-		it('should return the count of 15', function() {
+		it('should return the total score of 150', function() {
 		    testFrame1 = new Frame(1, "/", 0);
 		    testFrame2 = new Frame(2, "/", 0);
 		    testFrame3 = new Frame(3, "/", 0);
@@ -96,5 +96,41 @@ describe('ScoreCard', function () {
 		     assert.equal(testScoreCard.addFrameScores(), 150);
 		})
 	})
+
+	describe('#addScoresAllStrikes', function() {
+		it('should return the count of 300', function() {
+		    testFrame1 = new Frame("X", 0, 0, 1);
+		    testFrame2 = new Frame("X", 0, 0, 2);
+		    testFrame3 = new Frame("X", 0, 0, 3);
+		    testFrame4 = new Frame("X", 0, 0, 4);
+		    testFrame5 = new Frame("X", 0, 0, 5);
+		    testFrame6 = new Frame("X", 0, 0, 6);
+		    testFrame7 = new Frame("X", 0, 0, 7);
+		    testFrame8 = new Frame("X", 0, 0, 8);
+		    testFrame9 = new Frame("X", 0, 0, 9);
+		    testFrame10 = new Frame("X", "X", "X", 10);
+		    console.log("in add strikes");
+		    
+console.log(testFrame1.getScore1());
+console.log(testFrame2.getScore1());
+console.log(testFrame3.getScore1());
+console.log(testFrame4.getScore1());
+console.log(testFrame5.getScore1());
+console.log(testFrame6.getScore1());
+console.log(testFrame7.getScore1());
+console.log(testFrame8.getScore1());
+console.log(testFrame9.getScore1());
+console.log(testFrame10.getScore1());
+console.log(testFrame10.getScore2());
+console.log(testFrame10.getScore3());
+
+
+
+		    var frameArray = [testFrame1, testFrame2, testFrame3, testFrame4, testFrame5, testFrame6, testFrame7, testFrame8, testFrame9, testFrame10]
+		    testScoreCard = new ScoreCard(frameArray);
+		     assert.equal(testScoreCard.addFrameScores(), 150);
+		})
+	})
+
 
 })
