@@ -10,9 +10,9 @@ class ScoreCard {
 	}
 
 	addFrameScores () {
-		for (i = 0; i < this.frameArray.length; i++) {
-			totalScore += frameArray[i].getScore1();
-			alert(frameArray[i].getScore1());
+		var totalScore = 0;
+		for (var i = 0; i < this.frameArray.length; i++) {
+			totalScore += this.frameArray[i].getScore1();
 		}
 		return totalScore;
 	}

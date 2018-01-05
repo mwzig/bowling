@@ -20,7 +20,7 @@ describe('ScoreCard', function () {
 		    testFrame3 = new Frame(5, 6, 7);
 		    var frameArray = [testFrame1, testFrame2, testFrame3]
 		    testScoreCard = new ScoreCard(frameArray);
-		     assert.equal(testScoreCard.addFrameScores, "3");
+		     assert.equal(testScoreCard.addFrameScores(), 3);
 		})
 	})
 })
