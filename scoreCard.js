@@ -3,9 +3,14 @@ class ScoreCard {
 		this.frameArray = frameArray;
 	}
 	
-	getFrameCount () {
+	getNbrOfFrames () {
 		return this.frameArray.length;
 	}
+
+	addFrameCount () {
+		return this.frameArray.length;
+	}
+
 }
 
 
