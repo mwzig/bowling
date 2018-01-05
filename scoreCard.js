@@ -1,4 +1,6 @@
 class ScoreCard {
+
+	
 	constructor (frameArray) {
 		this.frameArray = frameArray;
 	}
@@ -7,8 +9,12 @@ class ScoreCard {
 		return this.frameArray.length;
 	}
 
-	addFrameCount () {
-		return this.frameArray.length;
+	addFrameScores () {
+		for (i = 0; i < this.frameArray.length; i++) {
+			totalScore += frameArray[i].getScore1();
+			alert(frameArray[i].getScore1());
+		}
+		return totalScore;
 	}
 
 }
