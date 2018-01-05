@@ -8,10 +8,16 @@ describe('Frame', function () {
 		})
 	})
 	describe('#getScore2()', function() {
-		it('should return the score of 5', function() {
+		it('should return the score of 6', function() {
 		    testFrameScore1 = new Frame(5, 6, 7);
 		    assert.equal(testFrameScore1.getScore2(), "6");
 		})
 	})
 
+	describe('#getScore3()', function() {
+		it('should return the score of 7', function() {
+		    testFrameScore1 = new Frame(5, 6, 7);
+		    assert.equal(testFrameScore1.getScore3(), "8");
+		})
+	})
 })
