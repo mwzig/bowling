@@ -3,7 +3,7 @@ class ScoreCard {
 		this.frameArray = frameArray;
 	}
 	
-	countFrames () {
+	getFrameCount () {
 		return this.frameArray.length;
 	}
 }
