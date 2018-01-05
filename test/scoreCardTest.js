@@ -75,7 +75,7 @@ describe('ScoreCard', function () {
 		    testFrame10 = new Frame(1, "/", 5);
 		    var frameArray = [testFrame1, testFrame2, testFrame3, testFrame4, testFrame5, testFrame6, testFrame7, testFrame8, testFrame9, testFrame10]
 		    testScoreCard = new ScoreCard(frameArray);
-		     assert.equal(testScoreCard.addFrameScores(), 38);
+		     assert.equal(testScoreCard.addFrameScores(), 50);
 		})
 	})
 
