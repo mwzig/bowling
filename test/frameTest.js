@@ -17,7 +17,7 @@ describe('Frame', function () {
 	describe('#getScore3()', function() {
 		it('should return the score of 7', function() {
 		    testFrameScore1 = new Frame(5, 6, 7);
-		    assert.equal(testFrameScore1.getScore3(), "8");
+		    assert.equal(testFrameScore1.getScore3(), "7");
 		})
 	})
 })
