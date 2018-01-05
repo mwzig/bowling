@@ -1,0 +1,12 @@
+{
+  "name": "bowling",
+  "version": "1.0.0",
+  "description": "Mary Ziegler's bowling kata",
+  "main": "index.js",
+  "scripts": {
+  	"start" : "node index.js",
+    "test": "mocha"
+  },
+  "author": "Mary Ziegler",
+  "license": "MIT"
+}
