@@ -13,7 +13,16 @@ class ScoreCard {
 		var totalScore = 0;
 		for (var i = 0; i < this.frameArray.length; i++) {
 			totalScore += this.frameArray[i].getScore1();
-			totalScore += this.frameArray[i].getScore2();
+			// check for a spare
+			if (this.frameArray[i].getScore2() == '/') {
+				totalScore = 10;
+				totalScore += this.frameArray[i+1].getScore1(); 
+			}
+			else {
+				totalScore += this.frameArray[i].getScore2();	
+			}
+			console.log(totalScore);
+			
 		}
 		return totalScore;
 	}
