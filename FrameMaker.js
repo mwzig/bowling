@@ -26,12 +26,18 @@ class FrameMaker {
 		var frame;
 		var frameArray = new Array(10);
 		var frameIndex = 0;
-		var score2 = 0;
-		var score3 = 0;
 		for (var i = 0; i < 10; i++) {
+			var score1 = 0;
+			var score2 = 0;
+			var score3 = 0;
 			if (i < 9) {
 				if (this.scores[i] == "X") {
 					frame = new Frame("X", 0, 0, i+1);
+				}
+				else {
+					score1 = this.scores[i].charAt(0);
+					score2 = this.scores[i].charAt(1);
+					frame = new Frame(score1, score2, score3, i+1);
 				}
 
 			} else {
@@ -43,7 +49,11 @@ class FrameMaker {
 					// For some reason, I had to save the scores to variables to pass to the constructor
 					// The line below does not work!
 					//frame = new Frame("X", this.scores[i+i], this.scores[i+2], i+1);
-					}
+				} else {
+					score1 = this.scores[i].charAt(0);
+					score2 = this.scores[i].charAt(1);
+					frame = new Frame(score1, score2, score3, i+1);
+				}
 			}
 			// increment the frames array index now
 			frameArray[frameIndex] = frame;
