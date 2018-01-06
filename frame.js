@@ -1,6 +1,5 @@
 class Frame {
 
-	
 	constructor (score1, score2, score3, frameNbr) {
 		// Assume frame numbers come in from 1 to 10
 		// If the frame number is less than 10, and there is a strike, we know the other

@@ -1,5 +1,6 @@
 var assert = require("assert");
 var Frame = require("../Frame");
+
 describe('Frame', function () {
 	describe('#getScore1()', function() {
 		it('should return the score of 5', function() {
@@ -20,4 +21,8 @@ describe('Frame', function () {
 		    assert.equal(testFrameScore1.getScore3(), "7");
 		})
 	})
+
+
+
+
 })
