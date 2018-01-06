@@ -137,7 +137,7 @@ describe('FrameMaker', function () {
 		    assert.equal(testFrames[8].getScore3(), 0);
 		    assert.equal(testFrames[9].getScore1(), 9);
 		    assert.equal(testFrames[9].getScore2(), 0);
-		    assert.equal(testFrames[9].getScore3(), 1);
+		    assert.equal(testFrames[9].getScore3(), 0);
 		})
 	
 	})
