@@ -4,7 +4,8 @@ var Frame = require("./frame");
 class FrameMaker {
 
 	constructor(scoreLine) {
-		this.scoreLine = scoreLine;
+		var scoreLineFixMisses = scoreLine.replace(/-/g, "0");
+		this.scoreLine = scoreLineFixMisses;
 		this.scores = this.scoreLine.split(" ");
 		for (var i = 0; i < this.scores.length; i++) {
 			console.log("i is " + i + "and score is " + this.scores[i]);
