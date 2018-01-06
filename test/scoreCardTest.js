@@ -3,7 +3,7 @@ var Frame     = require("../Frame");
 var ScoreCard = require("../ScoreCard");
 
 
-// To verify the expected math, I found this site:  http://www.bowlinggenius.com/
+// To verify the expected math, I found this site:  
 
 describe('ScoreCard', function () {
 	describe('#getNbrOfFrames', function() {

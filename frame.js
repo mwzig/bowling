@@ -1,9 +1,11 @@
 class Frame {
+
+	
 	constructor (score1, score2, score3, frameNbr) {
 		// Assume frame numbers come in from 1 to 10
 		// If the frame number is less than 10, and there is a strike, we know the other
-		// two scores are 0.
-		// If the frame number is 10, and there is a strike, the other frames may be filled
+		// two scores for that frame are 0.
+		// If the frame number is 10, and there is a strike, the other scores may be filled
 		if (frameNbr < 1 || frameNbr > 10) {
 			console.log("Invalid frame number passed to Frame constructor in frame.js");
 			exit();
