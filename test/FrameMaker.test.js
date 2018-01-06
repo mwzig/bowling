@@ -23,7 +23,16 @@ describe('FrameMaker', function () {
 		    testFrames = testFrameMaker.getFrames();
 		    assert.equal(testFrames.length, 10);
 		})
+
+		it('should return an valid data in the array of Frame Objects', function() {
+		    testFrameMaker = new FrameMaker("X X X X X X X X X X X X");
+		    testFrames = testFrameMaker.getFrames();
+		    assert.equal(testFrames[0].getScore1(), 11);
+		    assert.equal(testFrames[0].getScore2(), 0);
+		    assert.equal(testFrames[0].getScore3(), 0);
+		})
+	
 	})
 		
-
+	
 })
