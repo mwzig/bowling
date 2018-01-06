@@ -17,5 +17,13 @@ describe('FrameMaker', function () {
 		})
 	})
 		
+	describe('#getFrames()', function() {
+		it('should return an array of Frame Objects', function() {
+		    testFrameMaker = new FrameMaker("X X X X X X X X X X X X");
+		    testFrames = testFrameMaker.getFrames();
+		    assert.equal(testFrames.length, 10);
+		})
+	})
+		
 
 })
