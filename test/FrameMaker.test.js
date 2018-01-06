@@ -13,7 +13,7 @@ describe('FrameMaker', function () {
 		it('should return a Frame Object', function() {
 		    testFrameMaker = new FrameMaker("X X X X X X X X X X X X");
 		    testFrame = testFrameMaker.getFrame();
-		    assert.equal(testFrameMaker.getScore1(), "X");
+		    assert.equal(testFrame.getScore1(), "X");
 		})
 	})
 		
