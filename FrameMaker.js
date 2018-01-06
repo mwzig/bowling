@@ -26,7 +26,7 @@ class FrameMaker {
 		var frame;
 		var frameArray = new Array(10);
 		var frameIndex = 0
-		for (var i = 0; i < this.scores.length; i++) {
+		for (var i = 0; i < 10; i++) {
 			if (i < 9) {
 				if (this.scores[i] == "X") {
 					frame = new Frame("X", 0, 0);
