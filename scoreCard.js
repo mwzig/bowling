@@ -29,6 +29,8 @@ class ScoreCard {
 						console.log("total score for " + i + "is" + totalScore);
 					}
 					else {
+						console.log("i+1 Score1 is " + this.frameArray[i+1].getScore1());
+						console.log("i+1 Score2 is " + this.frameArray[i+1].getScore2());
 						totalScore += this.frameArray[i+1].getScore1();
 						totalScore += this.frameArray[i+1].getScore2();
 						console.log("total score for " + i + "is" + totalScore);
@@ -48,7 +50,9 @@ class ScoreCard {
 						console.log("total score for " + i + "is" + totalScore);
 					}
 			 	} else {
-					console.log("i=9");				
+					console.log("i=9");	
+					console.log(this.frameArray[i].getScore2());			
+					console.log(this.frameArray[i].getScore3());			
 					totalScore += this.frameArray[i].getScore2();
 					totalScore += this.frameArray[i].getScore3();
 					console.log("total score for " + i + "is" + totalScore);
