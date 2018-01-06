@@ -158,4 +158,23 @@ describe('ScoreCard', function () {
 		})
 	})
 
+	describe('#addScoresSparesFirstMiddleLastFinalStrike', function() {
+		it('should return the count of 67', function() {
+		    testFrame1 = new Frame(1, "/", 0, 1);
+		    testFrame2 = new Frame(1, 7, 0, 2);
+		    testFrame3 = new Frame(1, 6, 0, 3);
+		    testFrame4 = new Frame(1, 5, 0, 4);
+		    testFrame5 = new Frame(4, "/", 0, 5);
+		    testFrame6 = new Frame(1, 0, 0, 6);
+		    testFrame7 = new Frame(1, 0, 0, 7);
+		    testFrame8 = new Frame(1, 0, 0, 8);
+		    testFrame9 = new Frame(1, 0, 0, 9);
+		    testFrame10 = new Frame(9, "/", 10, 10);
+		    console.log("in add strikes");
+		    
+		    var frameArray = [testFrame1, testFrame2, testFrame3, testFrame4, testFrame5, testFrame6, testFrame7, testFrame8, testFrame9, testFrame10]
+		    testScoreCard = new ScoreCard(frameArray);
+		     assert.equal(testScoreCard.addFrameScores(), 58);
+		})
+	})
 })
