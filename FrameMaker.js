@@ -25,16 +25,22 @@ class FrameMaker {
 
 		var frame;
 		var frameArray = new Array(10);
-		var frameIndex = 0
+		var frameIndex = 0;
+		var score2 = 0;
+		var score3 = 0;
 		for (var i = 0; i < 10; i++) {
 			if (i < 9) {
 				if (this.scores[i] == "X") {
-					frame = new Frame("X", 0, 0);
+					frame = new Frame("X", 0, 0, i+1);
 				}
 
 			} else {
 				if (this.scores[i] == "X") {
-					frame = new Frame("X", this.scores[i+i], this.scores[i+2]);
+					console.log("here they are " + this.scores[i+1] + " " + this.scores[i+1] )
+					score2 = this.scores[i+1];
+					score3 = this.scores[i+2];
+					//frame = new Frame("X", score2, score3, i+1);
+					frame = new Frame("X", this.scores[i+i], this.scores[i+2], i+1);
 					}
 			}
 			// increment the frames array index now
