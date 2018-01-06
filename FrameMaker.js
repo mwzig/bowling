@@ -39,8 +39,10 @@ class FrameMaker {
 					console.log("here they are " + this.scores[i+1] + " " + this.scores[i+1] )
 					score2 = this.scores[i+1];
 					score3 = this.scores[i+2];
-					//frame = new Frame("X", score2, score3, i+1);
-					frame = new Frame("X", this.scores[i+i], this.scores[i+2], i+1);
+					frame = new Frame("X", score2, score3, i+1);
+					// For some reason, I had to save the scores to variables to pass to the constructor
+					// The line below does not work!
+					//frame = new Frame("X", this.scores[i+i], this.scores[i+2], i+1);
 					}
 			}
 			// increment the frames array index now
