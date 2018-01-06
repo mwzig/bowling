@@ -98,7 +98,7 @@ describe('ScoreCard', function () {
 	})
 
 	describe('#addScoresAllStrikes', function() {
-		it('should return the count of 300', function() {
+		it('should return the score of 300', function() {
 		    testFrame1 = new Frame("X", 0, 0, 1);
 		    testFrame2 = new Frame("X", 0, 0, 2);
 		    testFrame3 = new Frame("X", 0, 0, 3);
@@ -117,9 +117,8 @@ describe('ScoreCard', function () {
 		})
 	})
 
-
 	describe('#addScoresStrikesFirstMiddleLast', function() {
-		it('should return the count of 41', function() {
+		it('should return the score of 41', function() {
 		    testFrame1 = new Frame("X", 0, 0, 1);
 		    testFrame2 = new Frame(1, 0, 0, 2);
 		    testFrame3 = new Frame(1, 0, 0, 3);
@@ -139,7 +138,7 @@ describe('ScoreCard', function () {
 	})
 
 	describe('#addScoresSparesFirstMiddleLast', function() {
-		it('should return the count of 58', function() {
+		it('should return the score of 58', function() {
 		    testFrame1 = new Frame(1, "/", 0, 1);
 		    testFrame2 = new Frame(1, 7, 0, 2);
 		    testFrame3 = new Frame(1, 6, 0, 3);
@@ -159,7 +158,7 @@ describe('ScoreCard', function () {
 	})
 
 	describe('#addScoresSparesFirstMiddleLastFinalStrike', function() {
-		it('should return the count of 67', function() {
+		it('should return the score of 67', function() {
 		    testFrame1 = new Frame(1, "/", 0, 1);
 		    testFrame2 = new Frame(1, 7, 0, 2);
 		    testFrame3 = new Frame(1, 6, 0, 3);
@@ -179,7 +178,7 @@ describe('ScoreCard', function () {
 	})
 
 	describe('#addScoresNoHits', function() {
-		it('should return the count of 0', function() {
+		it('should return the score of 0', function() {
 		    testFrame1 = new Frame(0, 0, 0, 1);
 		    testFrame2 = new Frame(0, 0, 0, 2);
 		    testFrame3 = new Frame(0, 0, 0, 3);
@@ -190,6 +189,26 @@ describe('ScoreCard', function () {
 		    testFrame8 = new Frame(0, 0, 0, 8);
 		    testFrame9 = new Frame(0, 0, 0, 9);
 		    testFrame10 = new Frame(0, 0, 10, 10);
+		    console.log("in add strikes");
+		    
+		    var frameArray = [testFrame1, testFrame2, testFrame3, testFrame4, testFrame5, testFrame6, testFrame7, testFrame8, testFrame9, testFrame10]
+		    testScoreCard = new ScoreCard(frameArray);
+		     assert.equal(testScoreCard.addFrameScores(), 0);
+		})
+	})
+
+	describe('#addScoresTenPairsOfNineThenNoHit', function() {
+		it('should return the score of 90', function() {
+		    testFrame1 = new Frame(9, 0, 0, 1);
+		    testFrame2 = new Frame(9, 0, 0, 2);
+		    testFrame3 = new Frame(9, 0, 0, 3);
+		    testFrame4 = new Frame(9, 0, 0, 4);
+		    testFrame5 = new Frame(9, 0, 0, 5);
+		    testFrame6 = new Frame(9, 0, 0, 6);
+		    testFrame7 = new Frame(9, 0, 0, 7);
+		    testFrame8 = new Frame(9, 0, 0, 8);
+		    testFrame9 = new Frame(9, 0, 0, 9);
+		    testFrame10 = new Frame(9, 0, 10, 10);
 		    console.log("in add strikes");
 		    
 		    var frameArray = [testFrame1, testFrame2, testFrame3, testFrame4, testFrame5, testFrame6, testFrame7, testFrame8, testFrame9, testFrame10]
