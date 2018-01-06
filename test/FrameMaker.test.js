@@ -140,6 +140,42 @@ describe('FrameMaker', function () {
 		    assert.equal(testFrames[9].getScore3(), 0);
 		})
 	
+		it('should return valid data for 5/ 9 times with final 5/5', function() {
+		    testFrameMaker = new FrameMaker("5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/5");
+		    testFrames = testFrameMaker.getFrames();
+		    console.log("testFrames are " + testFrames);
+		    assert.equal(testFrames[0].getScore1(), 5);
+		    assert.equal(testFrames[0].getScore2(), "/");
+		    assert.equal(testFrames[0].getScore3(), 0);
+		    assert.equal(testFrames[1].getScore1(), 5);
+		    assert.equal(testFrames[1].getScore2(), "/");
+		    assert.equal(testFrames[1].getScore3(), 0);
+		    assert.equal(testFrames[2].getScore1(), 5);
+		    assert.equal(testFrames[2].getScore2(), "/");
+		    assert.equal(testFrames[2].getScore3(), 0);
+		    assert.equal(testFrames[3].getScore1(), 5);
+		    assert.equal(testFrames[3].getScore2(), "/");
+		    assert.equal(testFrames[3].getScore3(), 0);
+		    assert.equal(testFrames[4].getScore1(), 5);
+		    assert.equal(testFrames[4].getScore2(), "/");
+		    assert.equal(testFrames[4].getScore3(), 0);
+		    assert.equal(testFrames[5].getScore1(), 5);
+		    assert.equal(testFrames[5].getScore2(), "/");
+		    assert.equal(testFrames[5].getScore3(), 0);
+		    assert.equal(testFrames[6].getScore1(), 5);
+		    assert.equal(testFrames[6].getScore2(), "/");
+		    assert.equal(testFrames[6].getScore3(), 0);
+		    assert.equal(testFrames[7].getScore1(), 5);
+		    assert.equal(testFrames[7].getScore2(), "/");
+		    assert.equal(testFrames[7].getScore3(), 0);
+		    assert.equal(testFrames[8].getScore1(), 5);
+		    assert.equal(testFrames[8].getScore2(), "/");
+		    assert.equal(testFrames[8].getScore3(), 0);
+		    assert.equal(testFrames[9].getScore1(), 5);
+		    assert.equal(testFrames[9].getScore2(), "/");
+		    assert.equal(testFrames[9].getScore3(), 5);
+		})
+	
 	})
 		
 	
