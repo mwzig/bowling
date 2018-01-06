@@ -1,3 +1,6 @@
+
+var Frame = require("./frame");
+
 class FrameMaker {
 
 	constructor(scoreLine) {
@@ -14,7 +17,8 @@ class FrameMaker {
 	}
 
 	getFrame() {
-		return new Frame("X", 0, 0, 1);
+		var frame = new Frame("X", 0, 0, 1);
+		return frame;
 	}
 
 }

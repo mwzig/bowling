@@ -8,6 +8,14 @@ describe('FrameMaker', function () {
 		    assert.equal(testFrameMaker.getScoreCount(), "12");
 		})
 	})
-	
+
+	describe('#getFrame()', function() {
+		it('should return a Frame Object', function() {
+		    testFrameMaker = new FrameMaker("X X X X X X X X X X X X");
+		    testFrame = testFrameMaker.getFrame();
+		    assert.equal(testFrameMaker.getScore1(), "X");
+		})
+	})
+		
 
 })
