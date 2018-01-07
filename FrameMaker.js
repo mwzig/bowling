@@ -4,12 +4,12 @@ var Frame = require("./frame");
 class FrameMaker {
 
 	constructor(scoreLine) {
+		//replace misses with 0 so if the line reads 5- then make it 50, 5 for first score, 0 for second score
 		var scoreLineFixMisses = scoreLine.replace(/-/g, "0");
 		this.scoreLine = scoreLineFixMisses;
+		//Next remove the spaces and separate into an score array
 		this.scores = this.scoreLine.split(" ");
-		for (var i = 0; i < this.scores.length; i++) {
-			console.log("i is " + i + "and score is " + this.scores[i]);
-		}
+
 	}
 
 
@@ -43,7 +43,6 @@ class FrameMaker {
 
 			} else {
 				if (this.scores[i] == "X") {
-					console.log("here they are " + this.scores[i+1] + " " + this.scores[i+1] )
 					score2 = this.scores[i+1];
 					score3 = this.scores[i+2];
 					frame = new Frame("X", score2, score3, i+1);

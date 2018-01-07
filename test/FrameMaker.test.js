@@ -35,7 +35,6 @@ describe('FrameMaker', function () {
 		it('should return valid data for all strikes in the array of Frame Objects', function() {
 		    testFrameMaker = new FrameMaker("X X X X X X X X X X X X");
 		    testFrames = testFrameMaker.getFrames();
-		    console.log("testFrames are " + testFrames);
 		    assert.equal(testFrames[0].getScore1(), 10);
 		    assert.equal(testFrames[0].getScore2(), 0);
 		    assert.equal(testFrames[0].getScore3(), 0);
@@ -71,7 +70,6 @@ describe('FrameMaker', function () {
 		it('should return valid data for no strikes no spares in the array of Frame Objects', function() {
 		    testFrameMaker = new FrameMaker("11 12 13 14 15 16 17 21 31 41");
 		    testFrames = testFrameMaker.getFrames();
-		    console.log("testFrames are " + testFrames);
 		    assert.equal(testFrames[0].getScore1(), 1);
 		    assert.equal(testFrames[0].getScore2(), 1);
 		    assert.equal(testFrames[0].getScore3(), 0);
@@ -107,7 +105,6 @@ describe('FrameMaker', function () {
 		it('should return valid data for 10 times roll 9 and then miss', function() {
 		    testFrameMaker = new FrameMaker("9- 9- 9- 9- 9- 9- 9- 9- 9- 9-");
 		    testFrames = testFrameMaker.getFrames();
-		    console.log("testFrames are " + testFrames);
 		    assert.equal(testFrames[0].getScore1(), 9);
 		    assert.equal(testFrames[0].getScore2(), 0);
 		    assert.equal(testFrames[0].getScore3(), 0);
@@ -143,7 +140,6 @@ describe('FrameMaker', function () {
 		it('should return valid data for 5/ 9 times with final 5/5', function() {
 		    testFrameMaker = new FrameMaker("5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/5");
 		    testFrames = testFrameMaker.getFrames();
-		    console.log("testFrames are " + testFrames);
 		    assert.equal(testFrames[0].getScore1(), 5);
 		    assert.equal(testFrames[0].getScore2(), "/");
 		    assert.equal(testFrames[0].getScore3(), 0);

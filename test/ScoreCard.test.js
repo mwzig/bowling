@@ -1,5 +1,6 @@
 var assert    = require("assert");
 var Frame     = require("../Frame");
+var FrameMaker = require("../FrameMaker");
 var ScoreCard = require("../ScoreCard");
 
 
@@ -112,11 +113,10 @@ describe('ScoreCard', function () {
 		    testFrame8 = new Frame("X", 0, 0, 8);
 		    testFrame9 = new Frame("X", 0, 0, 9);
 		    testFrame10 = new Frame("X", "X", "X", 10);
-		    console.log("in add strikes");
 		    
 		    var frameArray = [testFrame1, testFrame2, testFrame3, testFrame4, testFrame5, testFrame6, testFrame7, testFrame8, testFrame9, testFrame10]
 		    testScoreCard = new ScoreCard(frameArray);
-		     assert.equal(testScoreCard.addFrameScores(), 300);
+ 		    assert.equal(testScoreCard.addFrameScores(), 300);
 		})
 	})
 
@@ -132,11 +132,10 @@ describe('ScoreCard', function () {
 		    testFrame8 = new Frame(1, 0, 0, 8);
 		    testFrame9 = new Frame(1, 0, 0, 9);
 		    testFrame10 = new Frame("X", 1, 1, 10);
-		    console.log("in add strikes");
 		    
 		    var frameArray = [testFrame1, testFrame2, testFrame3, testFrame4, testFrame5, testFrame6, testFrame7, testFrame8, testFrame9, testFrame10]
 		    testScoreCard = new ScoreCard(frameArray);
-		     assert.equal(testScoreCard.addFrameScores(), 41);
+		    assert.equal(testScoreCard.addFrameScores(), 41);
 		})
 	})
 
@@ -152,11 +151,10 @@ describe('ScoreCard', function () {
 		    testFrame8 = new Frame(1, 0, 0, 8);
 		    testFrame9 = new Frame(1, 0, 0, 9);
 		    testFrame10 = new Frame(9, "/", 1, 10);
-		    console.log("in add strikes");
 		    
 		    var frameArray = [testFrame1, testFrame2, testFrame3, testFrame4, testFrame5, testFrame6, testFrame7, testFrame8, testFrame9, testFrame10]
 		    testScoreCard = new ScoreCard(frameArray);
-		     assert.equal(testScoreCard.addFrameScores(), 58);
+		    assert.equal(testScoreCard.addFrameScores(), 58);
 		})
 	})
 
@@ -172,11 +170,10 @@ describe('ScoreCard', function () {
 		    testFrame8 = new Frame(1, 0, 0, 8);
 		    testFrame9 = new Frame(1, 0, 0, 9);
 		    testFrame10 = new Frame(9, "/", 10, 10);
-		    console.log("in add strikes");
 		    
 		    var frameArray = [testFrame1, testFrame2, testFrame3, testFrame4, testFrame5, testFrame6, testFrame7, testFrame8, testFrame9, testFrame10]
 		    testScoreCard = new ScoreCard(frameArray);
-		     assert.equal(testScoreCard.addFrameScores(), 67);
+		    assert.equal(testScoreCard.addFrameScores(), 67);
 		})
 	})
 
@@ -192,11 +189,10 @@ describe('ScoreCard', function () {
 		    testFrame8 = new Frame(0, 0, 0, 8);
 		    testFrame9 = new Frame(0, 0, 0, 9);
 		    testFrame10 = new Frame(0, 0, 10, 10);
-		    console.log("in add strikes");
 		    
 		    var frameArray = [testFrame1, testFrame2, testFrame3, testFrame4, testFrame5, testFrame6, testFrame7, testFrame8, testFrame9, testFrame10]
 		    testScoreCard = new ScoreCard(frameArray);
-		     assert.equal(testScoreCard.addFrameScores(), 0);
+		    assert.equal(testScoreCard.addFrameScores(), 0);
 		})
 	})
 
@@ -212,11 +208,10 @@ describe('ScoreCard', function () {
 		    testFrame8 = new Frame(9, 0, 0, 8);
 		    testFrame9 = new Frame(9, 0, 0, 9);
 		    testFrame10 = new Frame(9, 0, 10, 10);
-		    console.log("in add strikes");
 		    
 		    var frameArray = [testFrame1, testFrame2, testFrame3, testFrame4, testFrame5, testFrame6, testFrame7, testFrame8, testFrame9, testFrame10]
 		    testScoreCard = new ScoreCard(frameArray);
-		     assert.equal(testScoreCard.addFrameScores(), 90);
+		    assert.equal(testScoreCard.addFrameScores(), 90);
 		})
 	})
 
@@ -232,12 +227,24 @@ describe('ScoreCard', function () {
 		    testFrame8 = new Frame(5, "/", 0, 8);
 		    testFrame9 = new Frame(5, "/", 0, 9);
 		    testFrame10 = new Frame(5, "/", 5, 10);
-		    console.log("in add strikes");
 		    
 		    var frameArray = [testFrame1, testFrame2, testFrame3, testFrame4, testFrame5, testFrame6, testFrame7, testFrame8, testFrame9, testFrame10]
 		    testScoreCard = new ScoreCard(frameArray);
-		     assert.equal(testScoreCard.addFrameScores(), 150);
+		    assert.equal(testScoreCard.addFrameScores(), 150);
 		})
 	})
+
+	describe('#testUsingFrameMakerAllNineThenMiss', function() {
+		it('should return the score of 90', function() {
+		    
+			testFrameMaker = new FrameMaker("9- 9- 9- 9- 9- 9- 9- 9- 9- 9-");
+		    var frameArray = testFrameMaker.getFrames();
+		    var frame = frameArray[0];
+		   
+		    testScoreCard = new ScoreCard(frameArray);
+		    assert.equal(testScoreCard.addFrameScores(), 90);
+		})
+	})
+	 	  
 
 })

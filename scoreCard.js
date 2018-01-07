@@ -30,7 +30,7 @@ class ScoreCard {
 				totalScore += this.processStrike(i, totalScore);
 			} else {
 
-				totalScore += this.frameArray[i].getScore1();
+				totalScore = totalScore +  this.frameArray[i].getScore1();
 				// Check for a spare, if it is a spare and it is not the last frame
 				// then add the first score from the next frame.
 				// If it is the last frame, then add score 3.
