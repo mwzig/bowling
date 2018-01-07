@@ -254,4 +254,13 @@ describe('ScoreCard', function () {
 		})
 	})
 
+	describe('#testUsingFrameMakerAllFivesAndSpares', function() {
+		it('should return the score of 90', function() {
+			testFrameMaker = new FrameMaker("5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/5");
+		    var frameArray = testFrameMaker.getFrames();
+		    var frame = frameArray[0];
+		    testScoreCard = new ScoreCard(frameArray);
+		    assert.equal(testScoreCard.addFrameScores(), 300);
+		})
+	})
 })
