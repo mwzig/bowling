@@ -67,7 +67,7 @@ node index.js "1- 2/ 34 X X 5- 7/ -- 4/ X 1 2"
 `
 
 
-To run the tests for this application from the command line (on Windows) go to the bowling directory.  Enter the following:
+### To run the tests for this application from the command line (on Windows) go to the bowling directory.  Enter the following:
 
 `
 npm test
