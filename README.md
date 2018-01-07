@@ -5,7 +5,8 @@
 2.  [Installation](#2-installation)
 3.  [Usage](#3-usage)
 4.  [Sample Output](#4-sample-output)
-5.  [Design Overview](#5-design-overview)
+5.  [Sample Output](#5-sample-output)
+6.  [Design Overview](#6-design-overview)
 
 ## 1. About
 Welcome to my Bowling Kata! 
@@ -15,7 +16,7 @@ http://codingdojo.org/kata/Bowling/
 
 This program calculates a total bowling score based on input scores of a series of bowling "rolls".  I wrote this program in JavaScript using test-driven development.  This is my first program written using node.js.  I used Mocha to create test cases, and git to commit to my local repository for each test case.  Keeping in mind the goal to develop using "red, green, refactor", I tested each case for red and green, and committed the code with a description like "red test complete for testUsingFrameMakerAllMisses", then "green test complete for testUsingFrameMakerAllMisses".
 
-For input, this application takes either a string of numbers and special characters (that represent misses, spares and strikes), or an array of Frame objects that represent . This program is written in JavaScript, and as such it does not have a "main".  It can be invoked by a test program that passes either a string of numbers and special characters or an array of Frame objectsinput a file that contains a list of words to find and a letter grid in which to find the words. The program then prints out a list of the words found and their coordinates in the grid.  (If the grid does not contain all of the words to find, the application also prints out the words not found.  Additionally, the application will optionally print out the input).
+I used the following site to verify my scoring: http://www.bowlinggenius.com/
 
 
 ## 2. Installation
@@ -24,27 +25,31 @@ Clone the repository:
     git clone https://github.com/mwzig/bowling.git
 ```
 
+
 ## 3.  Usage
 
 To run this application from the command line (on Windows) go to the bowling directory.  Enter one of the following:
 
+to run with a default input bowling score string parameter of "1- 2/ 34 X X 5- 7/ -- 4/ X 1 2" :
 `
-$ INPUT=1 npm start
-`
-`
-$ INPUT=2 npm start
-`
-`
-$ INPUT=3 npm start
-`
-`
-$ INPUT=4 npm start
+node index.js
 `
 
-INPUT=1 uses the following input:
-INPUT=1 uses the following input:
-INPUT=1 uses the following input:
-INPUT=1 uses the following input:
+to run and get an output explanation of how to enter a bowling score string parameter:
+`
+node index.js ?
+`
+
+or, enter your own bowling score string parameter like the following examples:
+
+`
+node index.js "X X X X X X X X X X X X"
+node index.js "9- 9- 9- 9- 9- 9- 9- 9- 9- 9-"
+node index.js "5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/5"
+node index.js "11 12 13 14 15 16 17 21 31 41"
+node index.js "-- -- -- -- -- -- -- -- -- --"
+node index.js "1- 2/ 34 X X 5- 7/ -- 4/ X 1 2"
+`
 
 
 To run the tests for this application from the command line (on Windows) go to the bowling directory.  Enter the following:
@@ -53,7 +58,27 @@ To run the tests for this application from the command line (on Windows) go to t
 npm test
 `
 
-## 7. Design Overview
+## 4. Sample Output with node index.js "9- 9- 9- 9- 9- 9- 9- 9- 9- 9-"
+```
+    The following bowling frame scores:
+	9- 9- 9- 9- 9- 9- 9- 9- 9- 9-
+	add up to a total score of 90
+```
+
+
+## 6. Sample Output with node index.js ? option
+
+```
+	Please enter a string of ten bowling scores, separated by spaces, in quotes as follows:
+	"12 34 5/ X X 18 9- 8- 1- 45"
+	If there is a strike in the tenth turn, add two more space separated scores as follows:
+	"12 34 5/ X X 18 9- 8- 1- X 1 2"
+	** Indicate a strike with uppercase 'X', a spare with '/', and a miss with '-' **
+
+```
+
+
+## 6. Design Overview
 
 There are three main classes in this application:   Frame, FrameMaker, and ScoreCard.   The Frame class represents one "turn" at bowling.   For the first nine turns, the user may have either a strike (one roll), two rolls that total less than 10, two rolls that include a first roll of less than ten pins and then a "spare" (knocking them all down), or two rolls that may contain one or two misses (no pins knocked down).  For the last, or tenth turn, the user may potentially roll three times.   To keep things simple, one Frame class is used for all ten turns.  The Frame object contains Score1 (for roll 1), Score2 (for roll 2), and Score 3 (for the potential 3rd roll on the tenth turn, but it is not used for turns 1-9).     
 
@@ -65,7 +90,4 @@ The "test" directory contains three test files:  Frame.test.js, FrameMaker.test.
 Each file tests the corresponding JavaScript class.  ScoreCard.test.js is the main test file.  It creates Frame objects with various score scenarios to call the ScoreCard class which calculates the total score.  Additionally, it creates strings that represent a series of scores, and then it calls FrameMaker to get an array of Frame objects 
 (created from one of those strings) to pass to the ScoreCard class which calculates the total score. 
 
-
-
-
-
+Note that I coded the Frame class first and did the major testing so that all logic would be complete for calculating the total bowling score based on an array of Frames.  A user interface for a bowling game could easily use these Frame objects.  I then coded the FrameMaker object to take in a string representing scores, because that is a further level of indirection.   Most likely a UI would use the frame objects, but for purposes of the Kata, I added the FrameMaker class.

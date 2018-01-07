@@ -18,7 +18,7 @@ if (process.argv.length > 2) {
 		console.log('"12 34 5/ X X 18 9- 8- 1- 45"');
 		console.log("If there is a strike in the tenth turn, add two more space separated scores as follows:");
 		console.log('"12 34 5/ X X 18 9- 8- 1- X 1 2"');
-		console.log("** Indicate strike with uppercase 'X', spare with '/', and miss with '-' **");
+		console.log("** Indicate a strike with uppercase 'X', a spare with '/', and a miss with '-' **");
 
 	} else {
 		console.log("The following bowling frame scores:");
