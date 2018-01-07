@@ -265,12 +265,12 @@ describe('ScoreCard', function () {
 	})
 
 	describe('#testUsingFrameMakerAllMisses', function() {
-		it('should return the score of 90', function() {
+		it('should return the score of 0', function() {
 			testFrameMaker = new FrameMaker("-- -- -- -- -- -- -- -- -- --");
 		    var frameArray = testFrameMaker.getFrames();
 		    var frame = frameArray[0];
 		    testScoreCard = new ScoreCard(frameArray);
-		    assert.equal(testScoreCard.addFrameScores(), 300);
+		    assert.equal(testScoreCard.addFrameScores(), 0);
 		})
 	})
 
