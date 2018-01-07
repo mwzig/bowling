@@ -9,9 +9,7 @@ class FrameMaker {
 		this.scoreLine = scoreLineFixMisses;
 		//Next remove the spaces and separate into an score array
 		this.scores = this.scoreLine.split(" ");
-
 	}
-
 
 	getScoreCount() {
 		return this.scores.length;
@@ -43,8 +41,12 @@ class FrameMaker {
 
 			} else {
 				if (this.scores[i] == "X") {
+					
 					score2 = this.scores[i+1];
 					score3 = this.scores[i+2];
+					
+					//score2 = this.scores[i].charAt(1);
+					//score3 = this.scores[i].charAt(2);
 					frame = new Frame("X", score2, score3, i+1);
 					// For some reason, I had to save the scores to variables to pass to the constructor
 					// The line below does not work!

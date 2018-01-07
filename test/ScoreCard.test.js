@@ -238,7 +238,6 @@ describe('ScoreCard', function () {
 		it('should return the score of 90', function() {
 			testFrameMaker = new FrameMaker("9- 9- 9- 9- 9- 9- 9- 9- 9- 9-");
 		    var frameArray = testFrameMaker.getFrames();
-		    var frame = frameArray[0];
 		    testScoreCard = new ScoreCard(frameArray);
 		    assert.equal(testScoreCard.addFrameScores(), 90);
 		})
@@ -248,7 +247,6 @@ describe('ScoreCard', function () {
 		it('should return the score of 300', function() {
 			testFrameMaker = new FrameMaker("X X X X X X X X X X X X");
 		    var frameArray = testFrameMaker.getFrames();
-		    var frame = frameArray[0];
 		    testScoreCard = new ScoreCard(frameArray);
 		    assert.equal(testScoreCard.addFrameScores(), 300);
 		})
@@ -258,7 +256,6 @@ describe('ScoreCard', function () {
 		it('should return the score of 150', function() {
 			testFrameMaker = new FrameMaker("5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/5");
 		    var frameArray = testFrameMaker.getFrames();
-		    var frame = frameArray[0];
 		    testScoreCard = new ScoreCard(frameArray);
 		    assert.equal(testScoreCard.addFrameScores(), 150);
 		})
@@ -268,10 +265,19 @@ describe('ScoreCard', function () {
 		it('should return the score of 0', function() {
 			testFrameMaker = new FrameMaker("-- -- -- -- -- -- -- -- -- --");
 		    var frameArray = testFrameMaker.getFrames();
-		    var frame = frameArray[0];
 		    testScoreCard = new ScoreCard(frameArray);
 		    assert.equal(testScoreCard.addFrameScores(), 0);
 		})
 	})
+
+	describe('#testUsingFrameMakerMiscScores', function() {
+		it('should return the score of 109', function() {
+			testFrameMaker = new FrameMaker("1- 2/ 34 X X 5- 7/ -- 4/ X 1 2");
+		    var frameArray = testFrameMaker.getFrames();
+		    testScoreCard = new ScoreCard(frameArray);
+		    assert.equal(testScoreCard.addFrameScores(), 107);
+		})
+	})
+
 
 })
