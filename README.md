@@ -30,17 +30,17 @@ Clone the repository:
 
 To run this application from the command line (on Windows) go to the bowling directory.  Enter one of the following:
 
-###to run with a default input bowling score string parameter of "1- 2/ 34 X X 5- 7/ -- 4/ X 1 2" :
+### to run with a default input bowling score string parameter of "1- 2/ 34 X X 5- 7/ -- 4/ X 1 2" :
 `
 node index.js
 `
 
-###to run and get an output explanation of how to enter a bowling score string parameter:
+### to run and get an output explanation of how to enter a bowling score string parameter:
 `
 node index.js ?
 `
 
-###or, enter your own bowling score string parameter like the following examples:
+### or, enter your own bowling score string parameter like the following examples:
 
 `
 node index.js "X X X X X X X X X X X X"
