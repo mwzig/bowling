@@ -275,7 +275,7 @@ describe('ScoreCard', function () {
 			testFrameMaker = new FrameMaker("1- 2/ 34 X X 5- 7/ -- 4/ X 1 2");
 		    var frameArray = testFrameMaker.getFrames();
 		    testScoreCard = new ScoreCard(frameArray);
-		    assert.equal(testScoreCard.addFrameScores(), 107);
+		    assert.equal(testScoreCard.addFrameScores(), 109);
 		})
 	})
 
