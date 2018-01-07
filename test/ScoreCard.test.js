@@ -245,7 +245,7 @@ describe('ScoreCard', function () {
 	})
 	 	  
 	describe('#testUsingFrameMakerAllStrikes', function() {
-		it('should return the score of 90', function() {
+		it('should return the score of 300', function() {
 			testFrameMaker = new FrameMaker("X X X X X X X X X X X X");
 		    var frameArray = testFrameMaker.getFrames();
 		    var frame = frameArray[0];
@@ -255,7 +255,7 @@ describe('ScoreCard', function () {
 	})
 
 	describe('#testUsingFrameMakerAllFivesAndSpares', function() {
-		it('should return the score of 90', function() {
+		it('should return the score of 150', function() {
 			testFrameMaker = new FrameMaker("5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/5");
 		    var frameArray = testFrameMaker.getFrames();
 		    var frame = frameArray[0];
