@@ -236,15 +236,22 @@ describe('ScoreCard', function () {
 
 	describe('#testUsingFrameMakerAllNineThenMiss', function() {
 		it('should return the score of 90', function() {
-		    
 			testFrameMaker = new FrameMaker("9- 9- 9- 9- 9- 9- 9- 9- 9- 9-");
 		    var frameArray = testFrameMaker.getFrames();
 		    var frame = frameArray[0];
-		   
 		    testScoreCard = new ScoreCard(frameArray);
 		    assert.equal(testScoreCard.addFrameScores(), 90);
 		})
 	})
 	 	  
+	describe('#testUsingFrameMakerAllStikes', function() {
+		it('should return the score of 90', function() {
+			testFrameMaker = new FrameMaker("X X X X X X X X X X X X");
+		    var frameArray = testFrameMaker.getFrames();
+		    var frame = frameArray[0];
+		    testScoreCard = new ScoreCard(frameArray);
+		    assert.equal(testScoreCard.addFrameScores(), 90);
+		})
+	})
 
 })
