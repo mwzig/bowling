@@ -30,24 +30,40 @@ Clone the repository:
 
 To run this application from the command line (on Windows) go to the bowling directory.  Enter one of the following:
 
-to run with a default input bowling score string parameter of "1- 2/ 34 X X 5- 7/ -- 4/ X 1 2" :
+###to run with a default input bowling score string parameter of "1- 2/ 34 X X 5- 7/ -- 4/ X 1 2" :
 `
 node index.js
 `
 
-to run and get an output explanation of how to enter a bowling score string parameter:
+###to run and get an output explanation of how to enter a bowling score string parameter:
 `
 node index.js ?
 `
 
-or, enter your own bowling score string parameter like the following examples:
+###or, enter your own bowling score string parameter like the following examples:
 
 `
 node index.js "X X X X X X X X X X X X"
+`
+
+
+`
 node index.js "9- 9- 9- 9- 9- 9- 9- 9- 9- 9-"
+`
+
+`
 node index.js "5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/5"
+`
+
+`
 node index.js "11 12 13 14 15 16 17 21 31 41"
+`
+
+`
 node index.js "-- -- -- -- -- -- -- -- -- --"
+`
+
+`
 node index.js "1- 2/ 34 X X 5- 7/ -- 4/ X 1 2"
 `
 
@@ -58,7 +74,7 @@ To run the tests for this application from the command line (on Windows) go to t
 npm test
 `
 
-## 4. Sample Output with node index.js "9- 9- 9- 9- 9- 9- 9- 9- 9- 9-"
+## 4. Sample Output for 'node index.js "9- 9- 9- 9- 9- 9- 9- 9- 9- 9-"'
 ```
     The following bowling frame scores:
 	9- 9- 9- 9- 9- 9- 9- 9- 9- 9-
@@ -66,7 +82,7 @@ npm test
 ```
 
 
-## 6. Sample Output with node index.js ? option
+## 5. Sample Output for "node index.js ?"
 
 ```
 	Please enter a string of ten bowling scores, separated by spaces, in quotes as follows:
