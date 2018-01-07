@@ -46,7 +46,6 @@ node index.js ?
 node index.js "X X X X X X X X X X X X"
 `
 
-
 `
 node index.js "9- 9- 9- 9- 9- 9- 9- 9- 9- 9-"
 `
@@ -74,7 +73,9 @@ To run the tests for this application from the command line (on Windows) go to t
 npm test
 `
 
-## 4. Sample Output for 'node index.js "9- 9- 9- 9- 9- 9- 9- 9- 9- 9-"'
+## 4. Sample Output A: 
+(for 'node index.js "9- 9- 9- 9- 9- 9- 9- 9- 9- 9-"')
+
 ```
     The following bowling frame scores:
 	9- 9- 9- 9- 9- 9- 9- 9- 9- 9-
@@ -82,7 +83,8 @@ npm test
 ```
 
 
-## 5. Sample Output for "node index.js ?"
+## 5. Sample Output B:
+(for "node index.js ?")
 
 ```
 	Please enter a string of ten bowling scores, separated by spaces, in quotes as follows:
