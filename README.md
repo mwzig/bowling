@@ -4,8 +4,8 @@
 1.  [About](#1-about)
 2.  [Installation](#2-installation)
 3.  [Usage](#3-usage)
-4.  [Sample Output](#4-sample-output-a)
-5.  [Sample Output](#5-sample-output-b)
+4.  [Sample Output A](#4-sample-output-a)
+5.  [Sample Output B](#5-sample-output-b)
 6.  [Design Overview](#6-design-overview)
 
 ## 1. About
