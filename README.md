@@ -4,8 +4,8 @@
 1.  [About](#1-about)
 2.  [Installation](#2-installation)
 3.  [Usage](#3-usage)
-4.  [Sample Output](#4-sample-output)
-5.  [Sample Output](#5-sample-output)
+4.  [Sample Output](#4-sample-output-a)
+5.  [Sample Output](#5-sample-output-b)
 6.  [Design Overview](#6-design-overview)
 
 ## 1. About
@@ -78,7 +78,7 @@ npm test
 `
 
 ## 4. Sample Output A: 
-(for 'node index.js "9- 9- 9- 9- 9- 9- 9- 9- 9- 9-"')
+(for `node index.js "9- 9- 9- 9- 9- 9- 9- 9- 9- 9-"`)
 
 ```
     The following bowling frame scores:
@@ -88,7 +88,7 @@ npm test
 
 
 ## 5. Sample Output B:
-(for "node index.js ?")
+(for `node index.js ?`)
 
 ```
 	Please enter a string of ten bowling scores, separated by spaces, in quotes as follows:
